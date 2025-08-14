@@ -1,2 +1,10 @@
 # Phylogenetic_Analysis_Zika_Virus2
 I've analyzed Zika virus genomes. I started by checking and trimming raw sequencing data with FastQC and Trimmomatic, then assembled consensus genomes. I then curated a global dataset from NCBI, downsampling it by country and date. I aligned all sequences with MAFFT, cleaned the alignment, and built a phylogenetic tree using IQ-TREE and iTOL.
+# A Report of My Phylogenetic Analysis
+I performed a comprehensive bioinformatics workflow to analyze Zika virus genomes. The project was divided into two main phases: preparing the data and building the phylogenetic tree.
+
+In the first phase, I began with raw sequencing data in FASTQ format for two Zika samples, zika_s1 and zika_s2. I used FastQC to perform a quality check to ensure the reads were of sufficient quality for downstream analysis. Next, I used Trimmomatic to remove adapter sequences and low-quality bases. Following this, I assembled the trimmed reads to generate a consensus genome sequence for each of my two local samples.
+
+For the second phase, I created a dataset for phylogenetic analysis. I downloaded a set of Zika virus sequences from the NCBI Virus database, applying an initial filter to include only those with a sequence length of 8500 base pairs or more. To further refine this dataset, I used a Jupyter Notebook to programmatically downsample the sequences, ensuring a representative selection by country, year, and month. This process generated a list of accession numbers, which I then used to retrieve the corresponding FASTA files for the downsampled sequences.
+
+Next, I combined my two consensus genomes with the downsampled NCBI sequences and a reference genome. I performed a multiple sequence alignment (MSA) on this combined dataset using MAFFT. To ensure the quality of my alignment, I removed any duplicated sequences and sequences containing ambiguous bases, or 'N's. Finally, I used IQ-TREE to infer a phylogenetic tree and visualize it with iTOL, rooting the tree with my chosen reference genome.
