@@ -41,6 +41,7 @@ This section lists the specific tools and commands used, making the analysis rep
 * **Alignment Cleaning**: **Seqkit** was used to remove duplicate sequences and sequences with ambiguous 'N' bases.
 * **Tree Inference**: **IQ-TREE** was used to construct a maximum-likelihood phylogenetic tree using the **GTR+G substitution model**.
 * **Visualization**: **iTOL** was used to visualize the final tree, which was rooted with a specific reference genome.
+![ITOL](image/ITOL.png)
 
 ***
 
