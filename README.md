@@ -27,20 +27,20 @@ This section lists the specific tools and commands used, making the analysis rep
 * **Global Data**: Zika virus sequences were downloaded from the NCBI Virus database.
 * **Quality Control**: Performed with **FastQC**.
 * **Trimming**: **Trimmomatic** was used to trim low-quality reads and primer sequences.
-* **Consensus Assembly**: (Mention the assembler you used, e.g., BWA, SAMtools, etc.).
+* **Consensus Assembly**: BWA and SAMtools were used for consensus assembly
 
 #### **2. Dataset Curation**
 
 * **NCBI Filtering**: Sequences were filtered for a minimum length of 8500 bp.
-* **Downsampling**: A **Jupyter Notebook** was used to select a representative subset of sequences based on country, year, and month.
+* **Downsampling**: A **Jupyter Notebook** using the phyton programming language was used to select a representative subset of sequences based on country, year, and month. The final downsampled sequences were 597 in number.
 * **FASTA Retrieval**: A custom script was used to fetch the FASTA files for the filtered accession numbers.
 
 #### **3. Phylogenetic Analysis**
 
-* **Multiple Sequence Alignment (MSA)**: **MAFFT** was used to align the combined dataset.
+* **Multiple Sequence Alignment (MSA)**: **MAFFT** was used to align the combined dataset (reference genome, downsampled filtered sequences, combined consensus sequences)
 * **Alignment Cleaning**: **Seqkit** was used to remove duplicate sequences and sequences with ambiguous 'N' bases.
 * **Tree Inference**: **IQ-TREE** was used to construct a maximum-likelihood phylogenetic tree using the **GTR+G substitution model**.
-* **Visualization**: **iTOL** was used to visualize the final tree, which was rooted with a specific reference genome (e.g., `KU729217.2_Zika_virus_isolate`).
+* **Visualization**: **iTOL** was used to visualize the final tree, which was rooted with a specific reference genome.
 
 ***
 
